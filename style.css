@@ -16,10 +16,9 @@ body {
 
 
 .container {
-    height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
 }
-
 
 
 .navbar-spotify {
@@ -33,24 +32,51 @@ body {
     width: 230px;
     height: 900px;
     border: 2px solid white;
-    }
-
-.list-info {
-    padding: 20px 20px;
-    gap: 10px;
-
 }
 
-    p {
-        color: rgb(172, 171, 171);
-    }
+.list-info {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+}
 
-    span {
-        color: rgb(255, 255, 255);
-    }
+p {
+    color: rgb(172, 171, 171);
+}
 
-    .footer-container {
-        height: 90px;
-        border: 2px solid white;
-        background-color: #282828;
-    }
+span {
+    color: rgb(255, 255, 255);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer-song {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.footer-play {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-volume {
+    display: flex;
+    gap: 20px;
+}
+
+.footer {
+    height: 90px;
+    border: 2px solid white;
+    background-color: #282828;
+}
+
