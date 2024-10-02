@@ -222,6 +222,10 @@ text-align: center;
     border: dashed white 2px;
 }
     
+.overflow {
+    max-height: 85%;
+    overflow-y: scroll;
+}
 
 @media (max-width: 575.98) {
     .list-music {
