@@ -186,7 +186,7 @@ figcaption {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 25px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -207,23 +207,97 @@ figcaption {
     gap: 25px;
 }
 
-.slider {
-    width: 380px;
-    height: 4px;
-    background-color: rgb(255, 255, 255, 0.5);
+.progress {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 20px;
 }
 
-.volume {
-    width: 80px;
-    height: 4px;
-    background-color: rgb(255, 255, 255, 0.5);
-}
+
+/* Progress DOT hover */
+
 
 .progress {
     display: flex;
     align-items: center;
     color: white;
     gap: 20px;
+}
+
+.slider {
+    width: 380px; 
+    height: 4px; 
+    background-color: gray; 
+    border-radius: 15px; 
+    position: relative; 
+}
+
+/* Parte bianca (10%) */
+.slider-fill {
+    height: 100%; /* Altezza della parte riempita */
+    width: 10%; 
+    background-color: white; 
+}
+
+.dot {
+    width: 15px; 
+    height: 15px; 
+    background-color: green; 
+    border-radius: 50%; 
+    position: absolute; 
+    left: 8%; /* Posiziona a destra del 100% della larghezza dello slider */
+    top: 50%; /* Centra verticalmente */
+    margin-top: -8px; /* Sposta verso l'alto di metà dell'altezza del dot */
+    z-index: 1; 
+    opacity: 0; /* Nascondi il dot di default */
+}
+
+/* Hover effect */
+.slider:hover .slider-fill {
+    background-color: green; 
+}
+
+.slider:hover .dot {
+    opacity: 1; 
+}
+
+
+
+.volume {
+    width: 80px;
+    height: 4px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    position: relative; 
+}
+
+.volume-fill {
+    height: 100%; /* Altezza della parte riempita */
+    width: 40%; 
+    background-color: white; 
+}
+
+.dot-volume {
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    top: 50%;
+    margin-top: -7px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.volume:hover .volume-fill {
+    background-color: green; 
+}
+
+.volume:hover .dot-volume {
+    opacity: 1; 
 }
 
 
